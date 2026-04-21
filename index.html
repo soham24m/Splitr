@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitr — Split Smart. Spend Smarter. Built for SRM.</title>
+    <meta name="description" content="Splitr is the ultimate expense tracker and bill splitting app for SRM Institute students in Kattankulathur. Track spending, split bills, and manage your finances smartly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- ==================== LANDING SCREEN ==================== -->
+    <div id="landing-screen" class="screen active-screen">
+        <!-- Hero Section -->
+        <section class="landing-hero">
+            <div class="landing-nav">
+                <div class="landing-logo">
+                    <svg class="svg-icon svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="16" y1="8" x2="8" y2="16"/></svg>
+                    <span class="logo-text">Splitr</span>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Stop arguing about who owes what.</h1>
+                <p class="hero-subtitle">The expense tracker and bill splitter built specifically for SRM Kattankulathur students.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large nav-to-auth" data-tab="register">Get Started Free</button>
+                    <button class="btn btn-ghost btn-large nav-to-auth" data-tab="login">Login</button>
+                </div>
+                <div class="hero-mockup">
+                    <div class="mockup-row">
+                        <div class="mockup-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M5 12v3a5 5 0 0 0 10 0v-3"/><path d="M18 12v3a5 5 0 0 1-1.3 3.4"/><path d="M14 4 10 8"/><path d="M19 4 15 8"/><path d="M12 22h-4"/></svg></div>
+                        <div class="mockup-info"><div class="mockup-title">Java Food Court</div><div class="mockup-meta">Rahul paid</div></div>
+                        <div class="mockup-amount">₹120</div>
+                    </div>
+                    <div class="mockup-row">
+                        <div class="mockup-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="14" height="10" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="13" cy="18" r="2"/><path d="M17 12h2l2 2v4h-2"/><path d="M8 8V6a2 2 0 0 1 2-2h4"/></svg></div>
+                        <div class="mockup-info"><div class="mockup-title">Zomato delivery</div><div class="mockup-meta">Priya paid</div></div>
+                        <div class="mockup-amount">₹340</div>
+                    </div>
+                    <div class="mockup-row">
+                        <div class="mockup-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M2 12h20"/></svg></div>
+                        <div class="mockup-info"><div class="mockup-title">SRM Shuttle</div><div class="mockup-meta">Karthik paid</div></div>
+                        <div class="mockup-amount">₹40</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="landing-features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="16" y1="8" x2="8" y2="16"/></svg></div>
+                    <h3 class="feature-title">Split Instantly</h3>
+                    <p class="feature-desc">Add a group expense and Splitr calculates everyone's share in seconds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div>
+                    <h3 class="feature-title">Track Everything</h3>
+                    <p class="feature-desc">From Java Food Court to Zomato — categorize every rupee you spend.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg></div>
+                    <h3 class="feature-title">Settle Smartly</h3>
+                    <p class="feature-desc">See exactly who owes whom and settle debts with minimum transactions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Built for SRM Section -->
+        <section class="landing-srm">
+            <div class="srm-container">
+                <div class="srm-left">
+                    <h2>Made for life at Kattankulathur.</h2>
+                    <p>Whether it's splitting the auto fare to Tambaram, tracking your Java Food Court tab, or managing PG rent with roommates — Splitr gets SRM student life.</p>
+                </div>
+                <div class="srm-right">
+                    <ul class="srm-list">
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Java Food Court tracking</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> SRM Shuttle & Auto splits</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> PG & Hostel rent management</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Zomato group orders</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> University canteen tabs</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Exam & course fee tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="landing-how-it-works">
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Create your account</h3>
+                    <p class="step-desc">Create your account with your SRM email.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Add & Invite</h3>
+                    <p class="step-desc">Add expenses and invite your roommates or friends.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Track & Settle</h3>
+                    <p class="step-desc">Track, split, and settle — all in one place.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="footer-logo">
+                <svg class="svg-icon svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="16" y1="8" x2="8" y2="16"/></svg>
+                <span class="logo-text">Splitr</span>
+            </div>
+            <p class="footer-tagline">Built with love for SRM Kattankulathur.</p>
+            <div class="footer-links">
+                <a href="#" class="nav-to-auth" data-tab="login">Login</a>
+                <a href="#" class="nav-to-auth" data-tab="register">Register</a>
+            </div>
+            <p class="footer-disclaimer">Not affiliated with SRMIST. Made by students, for students.</p>
+        </footer>
+    </div>
+
+    <!-- ==================== AUTH SCREEN ==================== -->
+    <div id="auth-screen" class="screen">
+        <button class="back-to-landing nav-to-landing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Back
+        </button>
+        <div class="auth-wrapper">
+            <div class="auth-logo nav-to-landing" style="cursor:pointer;">
+                <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="16" y1="8" x2="8" y2="16"/></svg>
+                <h1 class="logo-text">Splitr</h1>
+                <p class="auth-tagline">Split smart. Spend smarter. Built for SRM.</p>
+            </div>
+            <div class="auth-card">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login" id="login-tab-btn">Login</button>
+                    <button class="auth-tab" data-tab="register" id="register-tab-btn">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form active-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="you@srmist.edu.in" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="login-submit-btn">Login</button>
+                </form>
+
+                <!-- Register Form -->
+                <form id="register-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="reg-name">Full Name</label>
+                        <input type="text" id="reg-name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" placeholder="you@srmist.edu.in" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-hostel">Hostel / PG Name <span class="optional">(optional)</span></label>
+                        <input type="text" id="reg-hostel" placeholder="e.g. NR Hostel, Estancia PG">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-year">Year of Study</label>
+                        <select id="reg-year">
+                            <option value="">Select year</option>
+                            <option value="1st">1st Year</option>
+                            <option value="2nd">2nd Year</option>
+                            <option value="3rd">3rd Year</option>
+                            <option value="4th">4th Year</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="register-submit-btn">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== QUIZ SCREEN ==================== -->
+    <div id="quiz-screen" class="screen">
+        <div class="quiz-wrapper">
+            <div class="quiz-header">
+                <svg class="logo-icon-svg small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="16" y1="8" x2="8" y2="16"/></svg>
+                <h2>Financial Personality Quiz</h2>
+                <p>Let's find out your money personality! Answer 5 quick questions.</p>
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+                </div>
+                <span class="quiz-step-label" id="quiz-step-label">Question 1 of 5</span>
+            </div>
+            <div class="quiz-body" id="quiz-body">
+                <!-- Questions rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== QUIZ RESULT SCREEN ==================== -->
+    <div id="quiz-result-screen" class="screen">
+        <div class="quiz-result-wrapper">
+            <div class="quiz-result-card" id="quiz-result-card">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN APP ==================== -->
+    <div id="app-screen" class="screen">
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+            <button class="hamburger-btn" id="hamburger-btn">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-logo">
+                <svg class="svg-icon tiny" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="16" y1="8" x2="8" y2="16"/></svg>
+                <span class="logo-text small">Splitr</span>
+            </div>
+        </div>
+
+        <!-- Sidebar Overlay (mobile) -->
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <svg class="svg-icon small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="16" y1="8" x2="8" y2="16"/></svg>
+                    <span class="logo-text">Splitr</span>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-link active" data-page="dashboard" id="nav-dashboard">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Dashboard
+                    </a>
+                    <a href="#" class="nav-link" data-page="groups" id="nav-groups">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Groups
+                    </a>
+                    <a href="#" class="nav-link" data-page="expenses" id="nav-expenses">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg> Expenses
+                    </a>
+                    <a href="#" class="nav-link" data-page="settlements" id="nav-settlements">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg> Settlements
+                    </a>
+                    <a href="#" class="nav-link" data-page="reports" id="nav-reports">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 20 18 10 12 10 12 20 6 20 6 14"/><path d="M3 20h18"/><path d="M14 6l6-6"/><path d="M14 2h6v6"/></svg> Reports
+                    </a>
+                    <a href="#" class="nav-link" data-page="challenges" id="nav-challenges">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg> Challenges
+                    </a>
+                    <a href="#" class="nav-link" data-page="profile" id="nav-profile">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg> Profile
+                    </a>
+                </nav>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-user" id="sidebar-user">
+                    <div class="sidebar-user-avatar" id="sidebar-avatar">S</div>
+                    <div class="sidebar-user-info">
+                        <span class="sidebar-user-name" id="sidebar-user-name">User</span>
+                        <span class="sidebar-user-badge" id="sidebar-user-badge">The Planner</span>
+                    </div>
+                </div>
+                <button class="btn btn-logout" id="logout-btn">Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="main-content">
+            <div id="page-container">
+                <!-- ===== DASHBOARD ===== -->
+                <div class="page active-page" id="page-dashboard">
+                    <div class="page-header">
+                        <h1 id="dashboard-greeting">Good evening, User</h1>
+                    </div>
+                    <div class="summary-cards" id="dashboard-summary-cards">
+                        <div class="summary-card">
+                            <div class="summary-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                            <div class="summary-card-info">
+                                <span class="summary-label">Total Spent This Month</span>
+                                <span class="summary-value" id="sum-total-spent">₹0</span>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+                            <div class="summary-card-info">
+                                <span class="summary-label">Pending Settlements</span>
+                                <span class="summary-value" id="sum-pending">₹0</span>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                            <div class="summary-card-info">
+                                <span class="summary-label">Active Groups</span>
+                                <span class="summary-value" id="sum-active-groups">0</span>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                            <div class="summary-card-info">
+                                <span class="summary-label">Budget Remaining</span>
+                                <span class="summary-value" id="sum-budget-remaining">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- No-Spend Day Calendar -->
+                    <div class="section-card">
+                        <h2 class="section-title">No-Spend Day Calendar</h2>
+                        <div class="calendar-header">
+                            <button class="cal-nav" id="cal-prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                            <span id="cal-month-label">April 2026</span>
+                            <button class="cal-nav" id="cal-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                        </div>
+                        <div class="calendar-grid" id="calendar-grid"></div>
+                        <div class="streak-info">
+                            <div class="streak-item">
+                                <span class="streak-label"><svg class="streak-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Current No-Spend Streak</span>
+                                <span class="streak-value" id="streak-current">0 days</span>
+                            </div>
+                            <div class="streak-item">
+                                <span class="streak-label"><svg class="streak-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Longest Streak Ever</span>
+                                <span class="streak-value" id="streak-longest">0 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Expenses -->
+                    <div class="section-card">
+                        <h2 class="section-title">Recent Expenses</h2>
+                        <div class="recent-expenses-list" id="recent-expenses-list">
+                            <div class="empty-state">No expenses yet. Start tracking!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== GROUPS PAGE ===== -->
+                <div class="page" id="page-groups">
+                    <div class="page-header">
+                        <h1>Groups</h1>
+                        <button class="btn btn-primary" id="create-group-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            New Group
+                        </button>
+                    </div>
+                    <div class="groups-list" id="groups-list">
+                        <div class="empty-state">No groups yet. Create one to start splitting!</div>
+                    </div>
+                </div>
+
+                <!-- ===== GROUP DETAIL PAGE ===== -->
+                <div class="page" id="page-group-detail">
+                    <div class="page-header">
+                        <button class="btn btn-ghost" id="back-to-groups-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                            Back to Groups
+                        </button>
+                        <h1 id="group-detail-name">Group Name</h1>
+                    </div>
+                    <!-- Trip Budget Panel -->
+                    <div class="trip-budget-panel" id="trip-budget-panel" style="display:none;">
+                        <h3 style="display:flex;align-items:center;gap:8px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M20 10v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10"/><path d="M4 10h16"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/><circle cx="12" cy="15" r="2"/></svg>
+                            Trip Budget Tracker
+                        </h3>
+                        <div id="trip-budget-bars"></div>
+                        <div id="trip-budget-warnings"></div>
+                    </div>
+                    <div class="group-members-bar" id="group-members-bar"></div>
+                    <div class="group-expenses-list" id="group-expenses-list">
+                        <div class="empty-state">No group expenses yet.</div>
+                    </div>
+                    <button class="btn btn-primary" id="add-group-expense-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        Add Group Expense
+                    </button>
+                </div>
+
+                <!-- ===== EXPENSES PAGE ===== -->
+                <div class="page" id="page-expenses">
+                    <div class="page-header">
+                        <h1>All Expenses</h1>
+                    </div>
+                    <div class="filters-bar">
+                        <input type="text" id="expense-search" placeholder="Search by description..." class="filter-input">
+                        <select id="expense-filter-cat" class="filter-select">
+                            <option value="">All Categories</option>
+                        </select>
+                        <select id="expense-filter-month" class="filter-select">
+                            <option value="">All Months</option>
+                        </select>
+                        <select id="expense-sort" class="filter-select">
+                            <option value="date-desc">Newest First</option>
+                            <option value="date-asc">Oldest First</option>
+                            <option value="amount-desc">Highest Amount</option>
+                            <option value="amount-asc">Lowest Amount</option>
+                        </select>
+                    </div>
+                    <div class="expenses-full-list" id="expenses-full-list">
+                        <div class="empty-state">No expenses yet.</div>
+                    </div>
+                </div>
+
+                <!-- ===== SETTLEMENTS PAGE ===== -->
+                <div class="page" id="page-settlements">
+                    <div class="page-header">
+                        <h1>Settlements</h1>
+                    </div>
+                    <div class="settlements-list" id="settlements-list">
+                        <div class="empty-state">No pending settlements.</div>
+                    </div>
+                </div>
+
+                <!-- ===== REPORTS PAGE ===== -->
+                <div class="page" id="page-reports">
+                    <div class="page-header">
+                        <h1>Reports</h1>
+                    </div>
+                    <div class="section-card">
+                        <div class="report-month-selector">
+                            <button class="cal-nav" id="report-prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                            <span id="report-month-label">April 2026</span>
+                            <button class="cal-nav" id="report-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                        </div>
+                        <canvas id="report-chart" width="700" height="350"></canvas>
+                    </div>
+                    <div class="section-card">
+                        <h2 class="section-title" style="display:flex;align-items:center;gap:8px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><circle cx="12" cy="12" r="10"/><rect x="8" y="13" width="8" height="3" rx="1"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                            Regret Report
+                        </h2>
+                        <div id="regret-report-content">
+                            <div class="empty-state">No regret-tagged expenses this month.</div>
+                        </div>
+                    </div>
+                    <div class="section-card report-card-section">
+                        <button class="btn btn-primary" id="generate-report-card-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            Generate Monthly Report Card
+                        </button>
+                        <div id="report-card-content" style="display:none;"></div>
+                    </div>
+                </div>
+
+                <!-- ===== CHALLENGES PAGE ===== -->
+                <div class="page" id="page-challenges">
+                    <div class="page-header">
+                        <h1>Challenges</h1>
+                    </div>
+                    <div class="challenges-list" id="challenges-list"></div>
+                </div>
+
+                <!-- ===== PROFILE PAGE ===== -->
+                <div class="page" id="page-profile">
+                    <div class="page-header">
+                        <h1>Profile</h1>
+                    </div>
+                    <div class="profile-card" id="profile-card">
+                        <!-- Rendered by JS -->
+                    </div>
+                    <div class="section-card">
+                        <h2 class="section-title">Monthly Budgets per Category</h2>
+                        <div class="budget-settings" id="budget-settings"></div>
+                        <button class="btn btn-primary" id="save-budgets-btn" style="margin-top:16px;">Save Budgets</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==================== FLOATING ADD BUTTON ==================== -->
+    <button class="fab" id="fab-add-expense" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </button>
+
+    <!-- ==================== ADD EXPENSE MODAL ==================== -->
+    <div class="modal-overlay" id="expense-modal-overlay">
+        <div class="modal" id="expense-modal">
+            <div class="modal-header">
+                <h2>Add Expense</h2>
+                <button class="modal-close" id="expense-modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+            <form id="expense-form" class="modal-body">
+                <div class="form-group">
+                    <label>Description</label>
+                    <div class="input-with-mic">
+                        <input type="text" id="exp-description" placeholder="e.g. Zomato order, Bus to Tambaram" required>
+                        <button type="button" class="mic-btn" id="mic-btn" title="Voice input">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                        </button>
+                    </div>
+                    <span class="auto-category-hint" id="auto-category-hint"></span>
+                </div>
+                <div class="form-group">
+                    <label>Amount</label>
+                    <div class="amount-input-wrap">
+                        <span class="rupee-prefix">₹</span>
+                        <input type="number" id="exp-amount" placeholder="0" min="1" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <div class="category-chips" id="category-chips">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="exp-date">
+                </div>
+                <div class="form-group toggle-group">
+                    <label>Group expense?</label>
+                    <label class="toggle">
+                        <input type="checkbox" id="exp-is-group">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="form-group" id="exp-group-fields" style="display:none;">
+                    <label>Select Group</label>
+                    <select id="exp-group-select" class="filter-select"></select>
+                    <label style="margin-top:8px;">Who paid?</label>
+                    <select id="exp-who-paid" class="filter-select"></select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="save-expense-btn">Save Expense</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== CREATE GROUP MODAL ==================== -->
+    <div class="modal-overlay" id="group-modal-overlay">
+        <div class="modal" id="group-modal">
+            <div class="modal-header">
+                <h2>Create Group</h2>
+                <button class="modal-close" id="group-modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+            <form id="group-form" class="modal-body">
+                <div class="form-group">
+                    <label>Group Name</label>
+                    <input type="text" id="grp-name" placeholder="e.g. PG Flatmates, Goa Trip" required>
+                </div>
+                <div class="form-group">
+                    <label>Description <span class="optional">(optional)</span></label>
+                    <input type="text" id="grp-desc" placeholder="What's this group for?">
+                </div>
+                <div class="form-group">
+                    <label>Add Members (comma separated names)</label>
+                    <input type="text" id="grp-members" placeholder="e.g. Rahul, Arjun, Priya" required>
+                </div>
+                <div class="form-group toggle-group">
+                    <label>This is a Trip</label>
+                    <label class="toggle">
+                        <input type="checkbox" id="grp-is-trip">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div id="trip-fields" style="display:none;">
+                    <div class="form-group">
+                        <label>Trip End Date</label>
+                        <input type="date" id="grp-trip-end">
+                    </div>
+                    <div class="form-group">
+                        <label>Total Trip Budget (₹)</label>
+                        <input type="number" id="grp-trip-budget" placeholder="e.g. 15000">
+                    </div>
+                    <div class="trip-sub-budgets">
+                        <label>Sub-budgets</label>
+                        <div class="form-group"><label class="sub-label">Food</label><input type="number" id="trip-sub-food" placeholder="₹"></div>
+                        <div class="form-group"><label class="sub-label">Transport</label><input type="number" id="trip-sub-transport" placeholder="₹"></div>
+                        <div class="form-group"><label class="sub-label">Hotels</label><input type="number" id="trip-sub-hotels" placeholder="₹"></div>
+                        <div class="form-group"><label class="sub-label">Activities</label><input type="number" id="trip-sub-activities" placeholder="₹"></div>
+                        <div class="form-group"><label class="sub-label">Other</label><input type="number" id="trip-sub-other" placeholder="₹"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Group</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== SHARE MODAL ==================== -->
+    <div class="modal-overlay" id="share-modal-overlay">
+        <div class="modal" id="share-modal">
+            <div class="modal-header">
+                <h2>Share Expense</h2>
+                <button class="modal-close" id="share-modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+            <div class="modal-body" id="share-modal-body">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SIMPLIFY DEBTS MODAL ==================== -->
+    <div class="modal-overlay" id="simplify-modal-overlay">
+        <div class="modal" id="simplify-modal">
+            <div class="modal-header">
+                <h2>Simplified Debts</h2>
+                <button class="modal-close" id="simplify-modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+            <div class="modal-body" id="simplify-modal-body">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MOOD TAGGING POPUP ==================== -->
+    <div class="mood-popup" id="mood-popup" style="display:none;">
+        <span class="mood-prompt">How do you feel about this purchase?</span>
+        <div class="mood-buttons">
+            <button class="mood-btn" data-mood="happy">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                Happy
+            </button>
+            <button class="mood-btn" data-mood="neutral">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="15" x2="16" y2="15"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                Neutral
+            </button>
+            <button class="mood-btn" data-mood="regret">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><rect x="8" y="13" width="8" height="3" rx="1"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                Regret
+            </button>
+            <button class="mood-btn" data-mood="necessary">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="14" x2="16" y2="14"/><path d="M7 8l2 2"/><path d="M17 8l-2 2"/></svg>
+                Necessary
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== VOICE LISTENING BADGE ==================== -->
+    <div class="listening-badge" id="listening-badge" style="display:none;">
+        <svg class="pulse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+        Listening…
+    </div>
+
+    <!-- ==================== EDIT PROFILE MODAL ==================== -->
+    <div class="modal-overlay" id="edit-profile-modal-overlay">
+        <div class="modal" id="edit-profile-modal">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="modal-close" id="edit-profile-modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+            <form id="edit-profile-form" class="modal-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="edit-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Hostel / PG</label>
+                    <input type="text" id="edit-hostel">
+                </div>
+                <div class="form-group">
+                    <label>Year of Study</label>
+                    <select id="edit-year">
+                        <option value="1st">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
